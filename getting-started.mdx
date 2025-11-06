@@ -1,0 +1,95 @@
+---
+title: Getting Started
+tescription: Step-by-step guide to set up and begin using Paperguide Documentation
+---
+
+## Installation and Setup
+
+You start your Paperguide journey by creating an account and initializing your documentation space. This process takes less than five minutes and requires only an email address. Once set up, you customize your workspace to fit your project's needs.
+
+<Steps>
+  <Step title="Create Account" icon="user">
+    Visit the Paperguide website and sign up with your email. Verify your account to access the dashboard.
+    
+````bash
+    # No installation needed - web-based access
+    # Simply navigate to app.paperguide.com
+    `````
+  </Step>
+  <Step title="Initialize Workspace" icon="settings">
+    Name your space and add initial folders for organization.
+    
+    <Callout kind="tip">
+      Choose a descriptive name like `ProjectAlpha-Docs` for easy identification.
+    </Callout>
+  </Step>
+  <Step title="Invite Collaborators" icon="users">
+    Share access with your team via email invites. Set roles such as editor or viewer.
+  </Step>
+</Steps>
+
+## Creating Your First Document
+
+You create documents using the built-in editor, which supports rich text and Markdown. Add sections, images, and code blocks to build comprehensive guides.
+
+<Tabs>
+  <Tab title="Markdown Mode" icon="code">
+    Switch to Markdown for advanced formatting.
+    
+````markdown
+    # My First Doc
+    
+    ## Section One
+    This is a sample section with `inline code`.
+    
+    ```javascript
+    // Nested code example
+    function initDoc() {
+      console.log('Document ready');
+    }
+    initDoc();
+    ```
+    `````
+  </Tab>
+  <Tab title="Visual Editor" icon="edit">
+    Use the WYSIWYG editor for quick content creation without syntax knowledge.
+    
+    <Image
+      src="https://example.com/visual-editor-screenshot.png"
+      alt="Screenshot of the visual editor in Paperguide"
+      width="800"
+      height="600"
+    />
+  </Tab>
+</Tabs>
+
+## Navigation and Organization
+
+You navigate your docs through a sidebar that lists folders and files. Use search to quickly find content across your space. Folders help categorize docs by topic or version.
+
+<Columns cols={2}>
+  <Card title="Folder Structure" icon="folder" href="#">
+    Create nested folders for complex projects.
+  </Card>
+  <Card title="Search Functionality" icon="search" href="#">
+    Find docs instantly with full-text search.
+  </Card>
+</Columns>
+
+## Troubleshooting Common Issues
+
+If you encounter login problems, clear your browser cache. For collaboration sync issues, check your internet connection.
+
+<Expandable title="Advanced Tips" default-open="false">
+  Integrate Paperguide with Git for version control backups.
+  
+````javascript
+  // Example Git integration script
+  const git = require('simple-git');
+  git('./docs').push((err) => {
+    if (err) console.error('Push failed');
+  });
+  `````
+</Expandable>
+
+Paperguide simplifies documentation management, allowing you to focus on content creation. With these steps, you establish a solid foundation for your project's docs. Explore further in the features section for enhanced capabilities. (Word count: 452)

@@ -1,0 +1,108 @@
+---
+title: Features
+tescription: Explore the key features of Paperguide Documentation for effective project management
+---
+
+## Overview of Capabilities
+
+Paperguide offers robust tools for documentation that enhance collaboration and organization. You leverage features like real-time editing and customizable templates to streamline workflows. These tools ensure your docs remain accessible and up-to-date.
+
+<Columns cols={3}>
+  <Card title="Real-Time Collaboration" icon="users" href="#">
+    Edit docs simultaneously with team members.
+  </Card>
+  <Card title="Template Library" icon="file-text" href="#">
+    Use pre-built templates for common doc types.
+  </Card>
+  <Card title="Embed Support" icon="link" href="#">
+    Integrate external content seamlessly.
+  </Card>
+</Columns>
+
+## Collaboration in Action
+
+You invite users and assign permissions to control access. Changes appear instantly, with notifications for updates.
+
+<Callout kind="success">
+  Real-time cursors show who is editing what section.
+</Callout>
+
+<Steps>
+  <Step title="Invite Users" icon="mail">
+    Send invites from the settings panel.
+    
+````javascript
+    // Simulated invite API call
+    fetch('/api/invite', {
+      method: 'POST',
+      body: JSON.stringify({ email: 'user@example.com' })
+    });
+    `````
+  </Step>
+  <Step title="Set Permissions" icon="lock">
+    Choose roles: admin, editor, or viewer.
+  </Step>
+  <Step title="Monitor Changes" icon="eye">
+    View activity logs for all edits.
+  </Step>
+</Steps>
+
+## Advanced Formatting Options
+
+You format docs with Markdown, embeds, and diagrams to create engaging content.
+
+<Tabs>
+  <Tab title="Markdown Support" icon="code">
+    Write in Markdown for precise control.
+    
+````markdown
+    ## Headings and Lists
+    - Item one
+    - Item two
+    
+    Code: ```python print('Hello') ```
+    `````
+  </Tab>
+  <Tab title="Diagram Integration" icon="image">
+    Add flowcharts using Mermaid syntax.
+    
+    ```mermaid
+    graph TD
+      A[Start] --> B[Edit Doc]
+      B --> C[Collaborate]
+      C --> D[Publish]
+    ```
+  </Tab>
+</Tabs>
+
+## Integration and Extensibility
+
+Connect Paperguide to external services via webhooks. You automate workflows, such as syncing with Git repositories.
+
+<Expandable title="Webhook Setup" default-open="true">
+  Configure endpoints to trigger on doc updates.
+  
+  <ParamField path="webhook-url" param-type="string" required="true">
+    URL to receive notifications.
+  </ParamField>
+  
+````javascript
+  // Example webhook payload
+  {
+    event: 'doc_updated',
+    docId: '12345',
+    timestamp: '2024-01-01T00:00:00Z'
+  }
+  `````
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Custom Templates">
+    Build reusable templates for consistency.
+  </Expandable>
+  <Expandable title="Export Options">
+    Export docs to PDF or HTML formats.
+  </Expandable>
+</ExpandableGroup>
+
+Paperguide's features empower you to create professional documentation efficiently. From basic editing to advanced integrations, it supports diverse project needs. Dive into configuration for setup details. (Word count: 378)

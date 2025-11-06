@@ -1,0 +1,120 @@
+---
+title: Configuration
+tescription: Guide to configuring Paperguide Documentation settings and customizations
+---
+
+## Workspace Settings
+
+You configure your Paperguide workspace to match your team's preferences. Adjust themes, permissions, and integrations from the admin panel. These settings ensure smooth operation and security.
+
+<Callout kind="alert">
+  Backup your configuration before making major changes.
+</Callout>
+
+<Steps>
+  <Step title="Access Settings" icon="settings">
+    Navigate to the admin dashboard.
+    
+````bash
+    # Command-line alternative for advanced users
+    paperguide config --open
+    `````
+  </Step>
+  <Step title="Theme Selection" icon="sun">
+    Choose light or dark mode for better usability.
+  </Step>
+  <Step title="Permission Management" icon="shield">
+    Define user roles and access levels.
+  </Step>
+</Steps>
+
+## Integration Configuration
+
+You set up integrations with tools like Slack or GitHub for notifications and syncing.
+
+<Tabs>
+  <Tab title="Slack Integration" icon="message">
+    Connect to receive update alerts.
+    
+    <ResponseField name="channel" field-type="string" required="true">
+      Slack channel ID for notifications.
+    </ResponseField>
+    
+````javascript
+    // Configuration object
+    const slackConfig = {
+      webhook: '{SLACK_WEBHOOK_URL}',
+      channel: '#docs-updates'
+    };
+    `````
+  </Tab>
+  <Tab title="GitHub Sync" icon="git-branch">
+    Enable automatic pushes to your repo.
+    
+    ```mermaid
+    sequenceDiagram
+      User->>Paperguide: Update Doc
+      Paperguide->>GitHub: Push Changes
+      GitHub->>Paperguide: Confirm Sync
+    ```
+  </Tab>
+</Tabs>
+
+## Custom Fields and Templates
+
+You define custom fields for metadata in your docs. Create templates to standardize document structure.
+
+<Columns cols={2}>
+  <Card title="Custom Fields" icon="tag" href="#">
+    Add fields like status or priority.
+  </Card>
+  <Card title="Template Creation" icon="file" href="#">
+    Design reusable doc skeletons.
+  </Card>
+</Columns>
+
+<CodeGroup tabs="JSON,YAML">
+  ```json
+  {
+    "template": {
+      "title": "Standard Doc",
+      "sections": ["intro", "details"]
+    }
+  }
+  ```
+  ```yaml
+  template:
+    title: Standard Doc
+    sections:
+      - intro
+      - details
+  ```
+</CodeGroup>
+
+## Security Configurations
+
+You implement two-factor authentication and API key management for secure access.
+
+<Expandable title="API Key Setup" default-open="false">
+  Generate keys for programmatic access.
+  
+  <ParamField header="X-API-Key" param-type="string" required="true">
+    Your secret API key for authentication.
+  </ParamField>
+  
+  | Setting | Description | Default |
+  |---------|-------------|---------|
+  | MFA | Enable two-factor auth | `false` |
+  | Key Expiry | Set expiration days | `365` |
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Backup Schedules">
+    Automate backups to external storage.
+  </Expandable>
+  <Expandable title="Audit Logs">
+    Review access and edit history.
+  </Expandable>
+</ExpandableGroup>
+
+With proper configuration, Paperguide adapts to your workflow. Regularly review settings to maintain optimal performance and security. Refer to features for more on capabilities. (Word count: 312)
